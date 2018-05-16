@@ -27,7 +27,7 @@ header > i {
 
 header > h1 {
   display: grid;
-  grid-column: 2 / 6; }
+  grid-column: 2 / 5; }
 
 nav {
   display: none;
@@ -37,14 +37,35 @@ nav {
   grid-template-rows: inherit;
   position: absolute; }
 
+button:first-child {
+  display: grid;
+  grid-column: auto;
+  grid-row: 2 / 3; }
+
+button:last-child {
+  display: grid;
+  grid-column: auto;
+  grid-row: 3  / 4; }
+
 .toggleMobileNav {
   display: grid; }
+
+main {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 3%; }
 
 i {
   cursor: pointer; }
 
 nav {
   background-color: gray; }
+
+header > h1 {
+  margin: auto; }
 
 .mobile_nav_button {
   background-color: darkred;
