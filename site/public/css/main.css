@@ -47,7 +47,7 @@ button:last-child {
   grid-column: auto;
   grid-row: 3  / 4; }
 
-.toggleMobileNav {
+.active {
   display: grid; }
 
 main {
