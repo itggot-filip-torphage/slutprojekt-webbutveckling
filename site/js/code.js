@@ -5,19 +5,10 @@ function randomImage(list){
     document.getElementById('clickbait').setAttribute('src', 'img/' + list[num]);
 }
 
+function toggleNav(){
+    var element = document.querySelector("nav");
+    element.classList.toggle("nav_active");
 
-
-$('i#toggleMenu').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    $('nav').toggleClass('active');
-
-    $(document).one('click', function closeMenu (e){
-        if($('nav').has(e.target).length === 0){
-            $('nav').removeClass('active');
-        } else {
-            $(document).one('click', closeMenu);
-        }
-    });
-});
+    var temp = document.querySelector(".temp")
+    temp.classList.toggle("active")
+}

@@ -8,13 +8,12 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body onload="randomImage(clickbait)">
     <div id="index_container">
     <header>
-        <i class="material-icons" id="toggleMenu">menu</i>
+        <i class="material-icons" onclick="toggleNav()" id="toggleMenu">menu</i>
         <h1>Main Menu</h1>
     </header>
     <nav>
@@ -25,6 +24,7 @@
             Items
         </button>
     </nav>
+    <div onclick="toggleNav()" class="temp"></div>
     <main>
         <picture>
             <a href="">
