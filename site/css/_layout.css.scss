@@ -78,5 +78,47 @@ main {
     display: grid;
     grid-template-columns: inherit;
     grid-template-rows: repeat(9, 1fr);
-    grid-gap: 3%;
+    background-color: darkgray;
+}
+
+main > figure {
+    display: grid;
+    grid-column: 1 / 6;
+    grid-row: 1 / 4;
+    font-size: 60px;
+}
+
+.articles {
+    display: grid;
+    grid-column: 1 / 6;
+    grid-row: 4 / 10;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr)
+}
+
+article {
+    grid-column: inherit;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+article img {
+    grid-column: span 1;
+}
+
+article p {
+    grid-column: span 2;
+}
+
+hr {
+    width: 100vw;
+    display: block;
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(to right, transparent, black, transparent);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-image-slice: 1;
 }
