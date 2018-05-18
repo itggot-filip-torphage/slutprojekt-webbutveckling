@@ -87,15 +87,18 @@ article {
   grid-row: span 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr; }
+  grid-template-rows: auto; }
 
 article img {
   grid-column: span 1; }
 
 article p {
-  grid-column: span 2; }
+  grid-column: span 2;
+  margin: 0px; }
 
 hr {
+  grid-column: span 3;
+  position: absolute;
   width: 100vw;
   display: block;
   border-top: 1px solid transparent;
@@ -103,7 +106,9 @@ hr {
   border-bottom: none;
   border-left: none;
   border-right: none;
-  border-image-slice: 1; }
+  border-image-slice: 1;
+  padding: 0px;
+  margin: 0px; }
 
 i {
   cursor: pointer; }
