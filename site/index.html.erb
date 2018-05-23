@@ -11,13 +11,31 @@
             Items
         </button>
     </nav>
-    <div onclick="toggleNav()" class="temp"></div>
+    <div class="temp" onclick="toggleNav()"></div>
     <main>
-        <picture>
-            <a href="/">
-                <i class="material-icons" id="clickbait"></i>
-            </a>
-        </picture>
+        <div class="slideshow">
+            <div class="slideshow_container">
+                <div class="main_slides fade">
+                    <img src="blank" id="clickbait">
+                </div>
+                <div class="main_slides fade">
+                    <img src="blank" id="clickbait">
+                </div>
+                <div class="main_slides fade">
+                    <img src="blank" id="clickbait">
+                </div>
+                <!-- Next and previous buttons -->
+                <i class="material-icons" id="prev" onclick="plusSlides(-1)">keyboard_arrow_left</i>
+                <i class="material-icons" id="next" onclick="plusSlides(1)">keyboard_arrow_right</i>
+            </div>
+
+            <div class="dot_container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <h3>News</h3>
         <div class="articles">
             <article>
                 <img src="img/dota2_icon.png" alt="test">
