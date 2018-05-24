@@ -2,18 +2,45 @@ i {
     cursor: pointer;
 }
 
-nav {
-    background-color: gray;
+#index_container {
+    background-color: #413C3C;
+}
+
+#heroes_container {
+    background-color: #413C3C;
+}
+
+p, h3 {
+    color: white;
+}
+
+header, nav {
+    background-color: #1E1B1B;
+}
+
+.logo {
+    background-color: #2D2929;
+}
+
+main {
+    background-color: #413C3C;
 }
 
 header > h1 {
     margin: auto;
+    color: white;
+}
+
+header > i {
+    color: #FF4200;
 }
 
 .mobile_nav_button {
-    background-color: darkred;
-    border: none;
+    text-decoration: none;
+    font-family: Arial;
+    align-items: center;
     color: white;
+    font-size: 20px;
     text-align: center;
     cursor: pointer;
 }
@@ -24,12 +51,13 @@ header > h1 {
     position: absolute;
     padding: 16px;
     top: 50%;
-    margin-top: -25px;
+    margin-top: -20px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
+    z-index: 3;
 }
 
 /* Position the "next button" to the right */
@@ -57,7 +85,21 @@ header > h1 {
     transition: background-color 0.6s ease;
   }
 
-.active, .dot:hover {
+.dot_active, .dot:hover {
     background-color: #FF4200;
     border-color: transparent;
+}
+
+hr {
+    position: absolute;
+    width: 100vw;
+    display: block;
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(to right, transparent, black, transparent);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-image-slice: 1;
+    padding: 0px;
+    margin: 0px;
 }

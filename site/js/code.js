@@ -4,12 +4,10 @@ function randomPic() {
     return clickbait[Math.floor((Math.random() * 1.99))];
 }
 
-document.getElementById("clickbait").src = "img/" + randomPic() + ".png";
-
 function toggleNav(){
     var element = document.querySelector("nav");
     element.classList.toggle("nav_active");
-
+    
     var temp = document.querySelector(".temp");
     temp.classList.toggle("active");
 }
@@ -17,6 +15,13 @@ function toggleNav(){
 // Slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
+
+var i = 0;
+var mains = document.getElementsByClassName("clickbait");
+for (i = 0; i < mains.length; i++) {
+    mains[i].src = "img/" + randomPic() + ".png";
+    console.log(mains[i])
+}
 
 function plusSlides(n) {
     showSlides(slideIndex += n)
@@ -36,8 +41,8 @@ function showSlides(n) {
         slides[i].style.display = "none"; 
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" dot_active", "");
     }
     slides[slideIndex-1].style.display = "grid"; 
-    dots[slideIndex-1].className += " active";
+    dots[slideIndex-1].className += " dot_active";
   }
