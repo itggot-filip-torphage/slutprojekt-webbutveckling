@@ -1,20 +1,17 @@
 i {
     cursor: pointer;
+    color: #FF4200;
 }
 
-#index_container {
-    background-color: #413C3C;
-}
-
-#heroes_container {
-    background-color: #413C3C;
-}
-
-p, h3 {
+.hero .text_visible, h3, p {
     color: white;
 }
 
-header, nav {
+.hero p {
+    color: transparent
+}
+
+header, nav, .filter {
     background-color: #1E1B1B;
 }
 

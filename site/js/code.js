@@ -6,10 +6,42 @@ function randomPic() {
 
 function toggleNav(){
     var element = document.querySelector("nav");
-    element.classList.toggle("nav_active");
+    element.classList.toggle("active");
+    
+    var temp = document.querySelector(".temp");
+    temp.setAttribute("onclick", "toggleNav()")
+    temp.classList.toggle("active");
+    temp.style.left = "80%";
+}
+
+function toggleFilter(){
+    console.log("g")
+    var element = document.querySelector(".filter");
+    element.classList.toggle("active");
     
     var temp = document.querySelector(".temp");
     temp.classList.toggle("active");
+    temp.setAttribute("onclick", "toggleFilter()")
+    temp.style.left = "0%";
+}
+
+function toggleText(){
+    var names = document.querySelectorAll("main p");
+    for (i = 0; i < names.length; i++) {
+        names[i].classList.toggle("text_visible");
+    }
+} 
+
+function toggleBox(id, text){
+    var icon = id.childNodes[1];
+    if (icon.innerHTML === "check_box_outline_blank") {
+        icon.innerHTML = "check_box";
+    } else if (icon.innerHTML === "check_box") {
+        icon.innerHTML = "check_box_outline_blank";
+    }
+    if (text === true) {
+        toggleText();
+    }
 }
 
 // Slideshow
