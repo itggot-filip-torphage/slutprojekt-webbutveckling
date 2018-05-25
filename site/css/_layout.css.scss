@@ -41,12 +41,10 @@ header {
 
 #toggleMenu {
     grid-column: 1 / 2;
-    font-size: 60px;
 }
 
 #toggleFilter {
     grid-column: -2 / -1;
-    font-size: 60px;
 }
 
 header > h1 {
@@ -58,7 +56,7 @@ nav {
     display: none;
     height: 100%;
     grid-column: 1 / 5;
-    width: 80vw;
+    width: 80%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10, 1fr);
     position: fixed;
@@ -69,7 +67,7 @@ nav {
     display: none;
     height: 100%;
     grid-column: -5 / -1;
-    width: 80vw;
+    width: 80%;
     left: 20%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10, 1fr);
@@ -115,7 +113,7 @@ nav > a {
 
 .temp {
     height: 100%;
-    width: 20vw;
+    width: 20%;
     display: none;
     left: 80%;
     position: fixed;
@@ -170,6 +168,7 @@ main {
 }
 
 .dot_container {
+    grid-column: span 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,6 +222,14 @@ article > p {
     align-self: center;
     word-wrap: break-word;
     margin-right: 5px;
+}
+
+article hr:last-child {
+    display: none;
+}
+
+article:nth-child(n+5) {
+    display: none;
 }
 
 .heroes {
@@ -359,6 +366,71 @@ sub p {
     justify-self: center;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) {    
+    header {
+        height: 10vh;
+    }
     
+    header > h1 {
+        display: none;
+    }
+
+    #toggleMenu {
+        display: none;
+    }
+
+    nav {
+        display: grid;
+        position: absolute;
+        height: 10vh;
+        grid-column: 1 / -1;
+        grid-row: auto;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+    }
+    
+    .logo {
+        grid-column: span 1;
+        height: 10vh;
+        width: 10vh;
+        background-color: none;
+        justify-self: center;
+    }
+
+    .mobile_nav_button {
+        grid-column: span 1;
+    }
+
+    .slideshow {
+        grid-row: span 5;
+    }
+
+    main .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    article:nth-child(n+5) {
+        display: grid;
+    }
+
+    article:nth-child(n) {
+        grid-column: span 1;
+    }
+
+    article:nth-of-type(odd) hr:last-child {
+        bottom: 0px;
+    }
+
+    article:nth-of-type(odd) hr {
+        width: 200%
+    }
+    
+    article:nth-of-type(odd) hr:nth-of-type(even) {
+        display: block;
+        width: 2px;
+        height: 100%;
+        right: 0px;
+        border-top: none;
+        border-right: 2px solid transparent;
+    }
 }

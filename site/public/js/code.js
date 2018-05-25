@@ -1,6 +1,13 @@
+var width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
 
 function randomPic() {
-    var clickbait = ['dota2_icon', 'dota2_icon'];
+    if (width >= 1000) {
+        var clickbait = ['gaben_desktop', 'dota2_icon'];
+    } else {
+        var clickbait = ['gaben_mobile', 'dota2_icon'];
+    }
     return clickbait[Math.floor((Math.random() * 1.99))];
 }
 
