@@ -44,6 +44,16 @@ function toggleBox(id, text){
     }
 }
 
+function toggleTips(n){
+    var i;
+    var classes = document.getElementsByClassName("tips");
+    console.log(classes)
+    for (i = 0; i < classes.length; i++) {
+        classes[i].style.display = "none"; 
+    }
+    classes[n-1].style.display = "grid"; 
+}
+
 // Slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -52,7 +62,6 @@ var i = 0;
 var mains = document.getElementsByClassName("clickbait");
 for (i = 0; i < mains.length; i++) {
     mains[i].src = "img/" + randomPic() + ".png";
-    console.log(mains[i])
 }
 
 function plusSlides(n) {

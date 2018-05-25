@@ -3,7 +3,7 @@ i {
     color: #FF4200;
 }
 
-.hero .text_visible, h3, p {
+.hero .text_visible, h3, h1, p {
     color: white;
 }
 
@@ -30,6 +30,10 @@ header > h1 {
 
 header > i {
     color: #FF4200;
+}
+
+a {
+    text-decoration: none;
 }
 
 .mobile_nav_button {
@@ -99,4 +103,8 @@ hr {
     border-image-slice: 1;
     padding: 0px;
     margin: 0px;
+}
+
+.info hr {
+    border-top: 32px solid transparent;
 }
