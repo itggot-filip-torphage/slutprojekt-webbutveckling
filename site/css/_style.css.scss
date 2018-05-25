@@ -38,6 +38,7 @@ header > i {
 
 #toggleFilter {
     font-size: 3.8em;
+    background-color: #1E1B1B;
 }
 
 a {
@@ -54,7 +55,6 @@ a {
     cursor: pointer;
 }
 
-/* Next & previous buttons */
 #prev, #next {
     cursor: pointer;
     position: absolute;
@@ -69,19 +69,15 @@ a {
     z-index: 3;
 }
 
-/* Position the "next button" to the right */
 #next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 #prev:hover, #next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-
-/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -117,8 +113,28 @@ hr {
     border-top: 32px solid transparent;
 }
 
+.sub-titles sub {
+    background-color: #413C3C;
+}
+
+sub p {
+    cursor: pointer;
+}
+
 @media (min-width: 1000px) {   
     .logo {
         background-color: #1E1B1B;
+    }
+
+    .info hr {
+        border-top: 54px solid transparent;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 2em;
     }
 }

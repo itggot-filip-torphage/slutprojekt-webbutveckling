@@ -22,7 +22,6 @@ function toggleNav(){
 }
 
 function toggleFilter(){
-    console.log("g")
     var element = document.querySelector(".filter");
     element.classList.toggle("active");
     

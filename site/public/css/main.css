@@ -148,7 +148,6 @@ main {
   justify-content: center;
   align-items: center; }
 
-/* Hide the images by default */
 .main_slides {
   display: none;
   grid-column: auto;
@@ -181,6 +180,8 @@ article {
   position: relative; }
 
 article > img {
+  height: 96px;
+  width: 96px;
   grid-column: span 2;
   align-self: center; }
 
@@ -208,7 +209,7 @@ article:nth-child(n+5) {
 
 .vertical {
   grid-column: span 1;
-  grid-row: auto;
+  grid-row: span 6;
   display: grid;
   grid-row-gap: 10px;
   grid-template-rows: repeat(6, 1fr); }
@@ -278,7 +279,6 @@ article:nth-child(n+5) {
   grid-column: span 1;
   grid-row: 1 / 2;
   display: grid;
-  background-color: #413C3C;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -366,7 +366,65 @@ sub p {
     height: 100%;
     right: 0px;
     border-top: none;
-    border-right: 2px solid transparent; } }
+    border-right: 2px solid transparent; }
+
+  article > img {
+    height: 128px;
+    width: 128px; }
+
+  #heroes_container main {
+    height: 100%; }
+
+  .heroes {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px; }
+
+  .vertical {
+    grid-column: span 6;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    height: 100%; }
+
+  .vertical a {
+    height: 50px; }
+
+  .hero, .vertical a {
+    display: grid;
+    height: 240px;
+    width: 160px;
+    justify-self: center;
+    align-self: center; }
+
+  .hero img {
+    height: 160px;
+    width: 160px; }
+
+  #toggleFilter {
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    top: 50%; }
+
+  .filter {
+    width: 20%;
+    left: 80%; }
+
+  .temp {
+    width: 80%; }
+
+  .info_container > img {
+    height: 160px;
+    width: 160px; }
+
+  .sub-titles sub {
+    margin-top: 4px;
+    margin-bottom: 4px; }
+
+  article > p {
+    margin-right: 30px; } }
 i {
   cursor: pointer;
   color: #FF4200; }
@@ -397,7 +455,8 @@ header > i {
   font-size: 3.8em; }
 
 #toggleFilter {
-  font-size: 3.8em; }
+  font-size: 3.8em;
+  background-color: #1E1B1B; }
 
 a {
   text-decoration: none; }
@@ -411,7 +470,6 @@ a {
   text-align: center;
   cursor: pointer; }
 
-/* Next & previous buttons */
 #prev, #next {
   cursor: pointer;
   position: absolute;
@@ -425,16 +483,13 @@ a {
   border-radius: 0 3px 3px 0;
   z-index: 3; }
 
-/* Position the "next button" to the right */
 #next {
   right: 0;
   border-radius: 3px 0 0 3px; }
 
-/* On hover, add a black background color with a little bit see-through */
 #prev:hover, #next:hover {
   background-color: rgba(0, 0, 0, 0.8); }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -466,6 +521,21 @@ hr {
 .info hr {
   border-top: 32px solid transparent; }
 
+.sub-titles sub {
+  background-color: #413C3C; }
+
+sub p {
+  cursor: pointer; }
+
 @media (min-width: 1000px) {
   .logo {
-    background-color: #1E1B1B; } }
+    background-color: #1E1B1B; }
+
+  .info hr {
+    border-top: 54px solid transparent; }
+
+  p {
+    font-size: 1.5em; }
+
+  h3 {
+    font-size: 2em; } }
