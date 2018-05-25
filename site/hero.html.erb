@@ -1,0 +1,74 @@
+<div id="hero_container">
+    <header>
+        <i class="material-icons" onclick="toggleNav()" id="toggleMenu">menu</i>
+        <h1>Heroes/Hero</h1>
+    </header>
+    <nav>
+        <a class="logo" href="/">
+            <img src="img/dota2_icon.png" alt="logo">
+        </a>
+        <a href="heroes.html" class="mobile_nav_button">Heroes</a>
+        <a href="items.html" class="mobile_nav_button">Items</a>
+    </nav>
+    <div class="temp" onclick="toggleNav()"></div>
+    <main>
+        <div class="info_container">
+            <img src="img/dota2_icon.png" alt="hero_icon">
+            <div class="titles">
+                <h1>General</h1>
+                <h1>Matchups</h1>
+            </div>
+            <div class="info">
+                <hr>
+                <div class="sub-titles">
+                    <sub>
+                        <p onclick="toggleTips(1)">Simple</p>
+                    </sub>
+                    <sub>
+                        <p>Advanced</p>                        
+                    </sub>
+                    <sub>
+                        <p onclick="toggleTips(2)">Good</p>                        
+                    </sub>
+                    <sub>
+                        <p>Bad</p>                        
+                    </sub>
+                </div>
+                <div class="tips" id="simple">
+                    <div class="slideshow_container">
+                        <div class="main_slides fade">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, commodi? Id, tempore sint inventore
+                                ea cupiditate hic omnis enim quam.</p>
+                        </div>
+                        <div class="main_slides fade">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, commodi? Id, tempore sint inventore
+                                ea cupiditate hic omnis enim quam.</p>
+                        </div>
+                        <div class="main_slides fade">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, commodi? Id, tempore sint inventore
+                                ea cupiditate hic omnis enim quam.</p>
+                        </div>
+                        <div class="main_slides fade">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, commodi? Id, tempore sint inventore
+                                ea cupiditate hic omnis enim quam.</p>
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <i class="material-icons" id="prev" onclick="plusSlides(-1)">keyboard_arrow_left</i>
+                        <i class="material-icons" id="next" onclick="plusSlides(1)">keyboard_arrow_right</i>
+                    </div>
+
+                    <div class="dot_container">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+                <div class="tips" id="good">
+                    <img src="img/dota2_icon.png" alt="hero">
+                    <img src="img/dota2_icon.png" alt="hero">
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
